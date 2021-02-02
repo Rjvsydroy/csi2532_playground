@@ -1,6 +1,9 @@
 # Lab3
 
 ## Exercice 1
+ Les professeurs peuvent enseigner le
+même cours sur plusieurs semestres et seule
+la plus récente doit être enregistrée.
 
 ![ERD1](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex1.png)
 
