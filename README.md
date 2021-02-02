@@ -8,25 +8,25 @@ la plus récente doit être enregistrée.
 ![ERD1](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex1.png)
 
 ## Exercice 2
- Chaque professeur doit enseigner un
-cours.
+Chaque professeur doit enseigner un cours.
+
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex2.png)
 
 ## Exercice 3
-Chaque professeur enseigne exactement
-un cours (ni plus, ni moins).
+Chaque professeur enseigne exactement un cours (ni plus, ni moins).
+
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex3.png)
 
 ## Exercice 4
-Chaque professeur enseigne exactement
-un cours (ni plus, ni moins), et chaque cours
+Chaque professeur enseigne exactement un cours (ni plus, ni moins), et chaque cours
 doit être enseigné par un professeur.
+
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex4.png)
 
 ## Exercice 5
-Les professeurs peuvent enseigner le
-même cours sur plusieurs semestres et
+Les professeurs peuvent enseigner le même cours sur plusieurs semestres et
 chaque doit être enregistrée
+
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex5.png)
 
 ## Exercice 6
@@ -38,6 +38,7 @@ possible qu'aucun professeur dans une
 Modélisez cette situation en introduisant des
 ensembles d'entités et des ensembles de
 relations supplémentaires si nécessaire.
+
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex6.png)
 
 
