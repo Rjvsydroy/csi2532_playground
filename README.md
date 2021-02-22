@@ -1,11 +1,11 @@
 # Lab4
 
-## Exercice 1
- Les professeurs peuvent enseigner le
-même cours sur plusieurs semestres et seule
-la plus récente doit être enregistrée.
+## Systèmes universitaire
 
-![ERD1](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex1.png)
+Une base de données universitaire contient des informations sur les professeurs(identifié par le numéro de sécurité sociale ou SSN) et les cours (identifié par courseid). Les professeurs donnent des cours; chacun de les situations suivantes concernent l'ensemble de relation teaches.
+
+### Exercice 1
+![D1](https://github.com/Rjvsydroy/csi2532_playground/blob/lab03/db/screenshotLab3_ex1.png)
 
 ## Exercice 2
 Chaque professeur doit enseigner un cours.
