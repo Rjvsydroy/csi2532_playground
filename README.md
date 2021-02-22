@@ -36,6 +36,27 @@ Chaque professeur enseigne exactement un cours (ni plus, ni moins).
 
 ![D3](https://github.com/Rjvsydroy/csi2532_playground/blob/lab4/diagramme3.png)
 
+### Schéma SQL
+```sql
+CREATE TABLE professors (
+  ssn varchar(30),
+  PRIMARY KEY (ssn)
+);
+
+CREATE TABLE teaches (
+  ssn varchar(30),
+  courseid varchar(30),
+  semesterid varchar(30),
+  PRIMARY KEY (courseid)
+);
+
+CREATE TABLE courses (
+  courseid varchar(30),
+  PRIMARY KEY (courseid)
+);
+
+
+```
 
 ### 5)
 Les professeurs peuvent enseigner le même cours sur plusieurs semestres et
@@ -43,6 +64,27 @@ chaque doit être enregistrée
 
 ![D5](https://github.com/Rjvsydroy/csi2532_playground/blob/lab4/diagramme5.png)
 
+### Schéma SQL
+```sql
+CREATE TABLE professors (
+  ssn varchar(30),
+  PRIMARY KEY (ssn)
+);
+
+CREATE TABLE teaches (
+  ssn varchar(30),
+  courseid varchar(30),
+  semesterid varchar(30),
+  PRIMARY KEY (semesterid)
+);
+
+CREATE TABLE courses (
+  courseid varchar(30),
+  PRIMARY KEY (courseid)
+);
+
+
+```
 ## 6)
 Supposons maintenant que certains cours
 puissent être enseignés conjointement par
@@ -55,6 +97,37 @@ relations supplémentaires si nécessaire.
 
 ![ERD2](https://github.com/Rjvsydroy/csi2532_playground/blob/lab4/diagramme6.png)
 
+```sql
+CREATE TABLE professors (
+  ssn varchar(30),
+  PRIMARY KEY (ssn)
+);
+
+CREATE TABLE teaches (
+  courseid varchar(30),
+  groupid varchar(30),
+  semesterid varchar(30),
+  PRIMARY KEY (semesterid)
+);
+
+CREATE TABLE group (
+  groupid varchar(30),
+  PRIMARY KEY (groupid)
+);
+
+CREATE TABLE in (
+  ssn varchar(30),
+  courseid varchar(30),
+  PRIMARY KEY (groupid)
+);
+
+CREATE TABLE courses (
+  courseid varchar(30),
+  PRIMARY KEY (courseid)
+);
+
+
+```
 
 
 
