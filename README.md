@@ -104,10 +104,10 @@ SELECT title, price FROM artworks
  WHERE artist_name = 'Picasso';
  ```
  
- |customer_id|artist_name|
+ |name|id|
 |---|---|
-|4|Picasso|
-|5|Picasso|
+|Emre|4|
+|Saeid|5|
 
 ## 8.
 
@@ -123,8 +123,8 @@ WHERE artist_name IN(
 AND amount > 30000;
 ```
  
- |id|name|
-|---|---|
-|---|---|
+|name|
+|---|
+|---|
  
 
