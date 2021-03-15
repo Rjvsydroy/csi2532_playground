@@ -11,6 +11,16 @@ Lister les name et birthplace de tous les artists
 SELECT name, birthplace FROM artists;
 ```
 
+|name|birthplace|
+|---|---|
+|Caravaggio|Milan|
+|Picasso|Malaga|
+|Leonardo|Florence|
+|Michelangelo|Arezzo|
+|Josefa|Seville|
+|Hans Hoffman|Weisenburg|
+|John|San Francisco|
+
 ## 2. 
 
 Lister le title et le price de toutes les artworks après 1600
@@ -19,6 +29,10 @@ Lister le title et le price de toutes les artworks après 1600
 SELECT title, price FROM artworks
  WHERE year > 1600;
  ```
+ 
+ |title|price|
+|---|---|
+|Three Musicians|11000.00|
  
  ## 3. 
  
@@ -29,6 +43,11 @@ SELECT title, price FROM artworks
  WHERE year = 2000 OR artisr_name = "Picasso";
  ```
  
+ |title|type|
+|---|---|
+|Three Musicians|Modern|
+
+ 
  ## 4.
  
  Lister les name et birthplace de tous les artists nés entre 1880 et 1930. (ASTUCE: EXTRACT(YEAR FROM dateofbirth) vous donne l'année à partir d'un attribut DATE
@@ -38,6 +57,11 @@ SELECT title, price FROM artworks
  WHERE EXTRACT (year FROM dateofBirth) > 1880 AND EXTRACT (year FROM dateofBirth) < 1930;
  ```
  
+ |name|birthplace|
+|---|---|
+|Picasso|Malaga|
+|John|San Francisco|
+
  ## 5. 
  
  Lister les name et le country de naissance de tous les artists dont le style de peinture est Modern, Baroque or Renaissance. (ASTUCE: utilisez le mot-clé IN).
@@ -47,6 +71,16 @@ SELECT title, price FROM artworks
  WHERE style IN ('Modern', 'Baroque', 'Renaissance');
  ```
  
+ |name|birthplace|
+|---|---|
+|Caravaggio|Milan|
+|Leonardo|Florence|
+|Michelangelo|Arezzo|
+|Josefa|Seville|
+|Hans Hoffman|Weisenburg|
+|John|San Francisco|
+
+ 
  ## 6.
  
  Lister tous les détails des artworks dans la base de données, triés par title.
@@ -55,7 +89,11 @@ SELECT title, price FROM artworks
  SELECT * FROM artworks
  ORDER BY title ASC;
  ```
- 
+ |title|year|type|price|artist_name|
+|---|---|---|---|---|
+|The Cardsharps|1594|Baroque|40000.00|Caravaggio|
+|Three Musicians|1921|Modern|11000.00|Picasso|
+
  ## 7.
  
  Lister les name et les customer ids de tous les customers qui aiment Picasso.
@@ -66,6 +104,11 @@ SELECT title, price FROM artworks
  WHERE artist_name = 'Picasso';
  ```
  
+ |customer_id|artist_name|
+|---|---|
+|4|Picasso|
+|5|Picasso|
+
 ## 8.
 
 Lister les name de tous les customers qui aiment les artistes de style Renaissance et dont le price est supérieur à 30000
@@ -80,5 +123,8 @@ WHERE artist_name IN(
 AND amount > 30000;
 ```
  
+ |id|name|
+|---|---|
+|---|---|
  
 
