@@ -98,4 +98,90 @@ AB sont les clés candidates de R.
 R est à la fois dans 3NF et dans BNCF.
 
 
+## Q2a: Test de la dépendance fonctionnelle
 
+Considérez la relation et les dépendances fonctionnelles suivantes:
+```sql
+R={A,B,C,D,E,F}
+F={
+  AB -> C,
+  BC -> AD,
+  D -> E,
+  CF -> E
+}
+```
+### Est-ce que AB -> D est valide? Si oui, montrez une preuve formelle; sinon, donnez un contre-exemple.
+
+(AB)+ = AB = ABC = ABCD = ABCDE = ABCDEF, donc AB -> D est valide.
+
+## Q2b: Test de la dépendance fonctionnelle
+
+Considérez la relation et les dépendances fonctionnelles suivantes:
+```sql
+R={A,B,C}
+F={
+  AB -> C
+}
+```
+### Est-ce que A -> C est valide? Si oui, montrez une preuve formelle; sinon, donnez un contre-exemple.
+
+A -> C n'est pas valide car on a (A)+ = A.
+
+## Q2c: Test de la dépendance fonctionnelle
+
+Considérez la relation et les dépendances fonctionnelles suivantes:
+```sql
+R={A,B,C}
+F={
+  AB -> C
+}
+```
+### Est-ce que B -> C est valide? Si oui, montrez une preuve formelle; sinon, donnez un contre-exemple.
+
+Comme dans la question précédente, B -> C n'est pas valide car (B)+ = B.
+
+## Q2d: Test de la dépendance fonctionnelle
+
+Considérez la relation et les dépendances fonctionnelles suivantes:
+```sql
+R={A,B,C}
+F={
+  AB -> C
+}
+```
+### Est-ce que A -> C OR B -> C est valide? Si oui, montrez une preuve formelle; sinon, donnez un contre-exemple.
+
+Depuis Q2b et Q2c, A -> C et B -> C ne sont pas valide.
+
+## Q3: Couverture canonique
+
+Calculer une couverture canonique pour 
+```sql
+F={
+  B -> A,
+  D -> A,
+  AB -> D
+}
+```
+En combinant la relation suivante: B - > A et D -> A, on aura: BD -> A. Donc:
+une couverture canonique pour F serait {BD -> A, AB -> D}.
+
+## Q4: Décomposition BCNF
+
+Produire une décomposition BCNF de R.
+```sql
+R = ABCDEFGH
+F = {
+  ABH -> C,
+  A -> DE,
+  BGH -> F,
+  F -> ADH,
+  BH -> GE
+}
+
+On a les fermetures suivantes:
+(A)+ = DEA, (B)+ = B, (C)+ = C, (D)+ = D, (E)+ = E, (F)+ = ADHF, (G)+ = G, (H)+ = H,
+(ABH)+ = DEABHC, (BGH)+ = FBGH, (BH)+ = GEBH.
+
+Les clés candidates seront: ABH et BGH car: pour A -> DE, A est contenu dans ABH et pour
+BH -> GE BH est contenu dans ABH et BGH.
